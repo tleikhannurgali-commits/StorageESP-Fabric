@@ -26,8 +26,8 @@ public class TracesTracker {
     private static final List<Trace> traces = new CopyOnWriteArrayList<>();
 
     public static void onSound(SoundInstance sound) {
-        if (!Features.TRACES.on() || sound == null || sound.getLocation() == null) return;
-        String name = sound.getLocation().toString();
+       if (!Features.TRACES.on() || sound == null || sound.getIdentifier() == null) return;
+        String name = sound.getIdentifier().toString();
 
         String lower = name.toLowerCase(Locale.ROOT);
         boolean match = false;
