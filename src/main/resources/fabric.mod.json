@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "storageesp",
+  "version": "1.0.1-fabric",
+  "name": "Storage ESP (Fabric / Pulse)",
+  "description": "Client-side storage/player ESP, radar and exploration UI. Independent from Pulse Visuals.",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.storageesp.StorageEspClient"
+    ]
+  },
+  "mixins": [
+    "storageesp.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
